@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Education Details</title>
+    <style>
+        body {
+            background-image: url('./templete/education.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            color: #00bcd4;
+            margin: 0;
+        }
+
+        .education-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .school-name {
+            font-size: 1.8em;
+            color: #333333;
+            margin-bottom: 8px;
+        }
+
+        .degree {
+            font-size: 1.4em;
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        .pass-out-year {
+            font-size: 1.2em;
+            color: #888888;
+            margin-bottom: 10px;
+        }
+
+        .field {
+            font-size: 1.2em;
+            color: #888888;
+            margin-bottom: 10px;
+        }
+
+        .college-link {
+            display: inline-block;
+            color: #00bcd4;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .college-link:hover {
+            color: #0077cc;
+            text-decoration: underline;
+        }
+
+        .accordion {
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ddd;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Education Details</h1>
+    </header>
+
+    <div class="education-container">
+        <button class="accordion">Narayana Group of School</button>
+        <div class="panel education-item">
+            <div class="school-name">Narayana Group of School</div>
+            <div class="degree">High School Education</div>
+            <div class="pass-out-year">Year of Passing: 2019</div>
+            <a href="https://www.google.com/maps/place/Narayana+Junior+College/@16.3251651,80.3843606,15.75z/data=!4m6!3m5!1s0x3a358a0d3fdcdf03:0x7eeb54fa80085bd!8m2!3d16.3251726!4d80.3867222!16s%2Fg%2F11cmbgg2sw?entry=ttu" class="college-link" target="_blank">Visit High School Website</a>
+        </div>
+
+        <button class="accordion">Sri Pratibha Junior College</button>
+        <div class="panel education-item">
+            <div class="school-name">Sri Pratibha Junior College</div>
+            <div class="degree">Secondary Education</div>
+            <div class="pass-out-year">Year of Passing: 2019 to 2021</div>
+            <a href="https://www.google.com/maps/place/Sri+Pratibha+Junior+College/@15.5287005,79.9710166,14z/data=!4m10!1m2!2m1!1sprathibha+junior+college+ongole!3m6!1s0x3a4b018a87247269:0x466e88faeedc3d73!8m2!3d15.5287012!4d80.0091241!15sCh9wcmF0aGliaGEganVuaW9yIGNvbGxlZ2Ugb25nb2xlkgEOanVuaW9yX2NvbGxlZ2XgAQA!16s%2Fg%2F1tdk3lmx?hl=en&entry=ttu" class="college-link" target="_blank">Visit University Website</a>
+        </div>
+
+        <button class="accordion">Panimalar Engineering College</button>
+        <div class="panel education-item">
+            <div class="school-name">Panimalar Engineering College</div>
+            <div class="degree">Bachelor's in Computer Science</div>
+            <div class="pass-out-year">Year of Passing: 2021 to 2025</div>
+            <a href="https://www.google.com/maps/place/Panimalar+Engineering+College/@13.0488982,79.9230266,12z/data=!4m10!1m2!2m1!1spanimalar+engineering+college+chennai!3m6!1s0x3a5261c68a9f3031:0xab41c8bdcf32ad47!8m2!3d13.0489049!4d80.0754642!15sCiVwYW5pbWFsYXIgZW5naW5lZXJpbmcgY29sbGVnZSBjaGVubmFpWiciJXBhbmltYWxhciBlbmdpbmVlcmluZyBjb2xsZWdlIGNoZW5uYWmSARBlZHVjYXRpb25fY2VudGVymgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU53YUV3eWQySjNFQUXgAQA!16s%2Fm%2F03d0n7q?entry=ttu" class="college-link" target="_blank">Visit University Website</a>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
